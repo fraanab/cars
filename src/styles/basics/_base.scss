@@ -1,0 +1,146 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto;
+    line-height: 1.6;
+    color: $clr1;
+}
+
+body {
+    margin: 0;
+    background-color: $clr11;
+    // background: $grad4;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        box-shadow: inset 7px 6px 12px #f0f0f0;
+
+        border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(13deg, #abb0b2cb 14%, #505556cc 64%);
+    }
+    &::-webkit-scrollbar-track {
+        background: linear-gradient(13deg, #abb0b2cb 14%, #505556cc 64%);
+    }
+    // &::-webkit-scrollbar-thumb {
+    //     background: linear-gradient(14deg, #abb0b2 14%, #505556 65%);
+    //     border-radius: 10px;
+    // }
+    // &::-webkit-scrollbar-thumb:hover {
+    //     background: linear-gradient(13deg, #abb0b2cb 14%, #505556cc 64%);
+    // }
+    // &::-webkit-scrollbar-track {
+    //     background: $clr1;
+    //     // border-radius: 10px;
+    //     box-shadow: inset 7px 6px 12px #f0f0f0;
+    // }
+}
+
+h1,
+h2 {
+    font-family: Montserrat;
+    margin: 0;
+    font-weight: 600;
+}
+h3,
+h4,
+h5,
+h6 {
+    font-family: Montserrat;
+    margin: 0;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: rem(50px);
+}
+
+p {
+    max-width: 56ch;
+    // max-width: 48ch;
+    margin: 0;
+    // margin: 0 0 1rem;
+}
+
+pre {
+    font-family: Roboto;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.el-textarea,
+textarea {
+    textarea {
+        resize: none;
+        ::placeholder {
+            font-family: Roboto;
+        }
+    }
+}
+
+.el-input input {
+    font-family: Roboto;
+}
+
+.el-input.is-focus .el-input__inner {
+    border-color: $clr6;
+}
+.el-input__inner:focus {
+    border-color: $clr6 !important;
+}
+
+.el-slider__runway,
+.el-slider__bar {
+    background-color: $clr6;
+    color: $clr6 !important;
+    .el-slider__button-wrapper * {
+        border-color: $clr6;
+    }
+}
+
+// button.place-bid-btn {
+//     padding: 5px 10px;
+//     font-size: 1.5em;
+//     background-color: $clr12;
+//     color: $clr11;
+//     border: 1px solid $clr4;
+//     border-radius: 2em;
+//     outline: none;
+// }
+
+a {
+    text-decoration: none;
+    color: $clr1;
+}
+
+// a:hover {
+//     filter: brightness(80%);
+// }
+
+// VUE-ANIMATIONS
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s 0.1s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+}

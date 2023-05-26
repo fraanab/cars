@@ -1,0 +1,75 @@
+.car-edit {
+    margin-top: 90px;
+
+    form {
+        width: 60%;
+        background-color: $clr10;
+        margin: 20px 0;
+        border-radius: 6px;
+        padding: 20px;
+
+
+        & .el-input {
+            margin-bottom: 20px;
+        }
+        & h2 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .img-upload-container {
+        background-color: $clr4;
+        padding: 20px 10px 10px 20px;
+        border: 1px solid $clr3;
+        border-radius: 6px;
+        margin-bottom: 20px;
+        p {
+            margin: 10px 0;
+        }
+
+        .upload-logo-container {
+            width: 50px;
+            // margin-bottom: 20px;
+        }
+
+        input {
+            width: 0;
+            height: 0;
+        }
+
+        .drag-container {
+            height: 160px;
+            border: 1px dashed $clr3;
+            border-radius: 6px;
+            background-color: $clr11;
+            margin-inline-end: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .img-list-container {
+        flex-wrap: wrap;
+        min-height: 100px;
+        margin-top: 10px;
+
+        .el-loading-mask {
+            border-radius: 6px;
+            margin-inline-end: 10px;
+            margin: -10px 0 0 -10px;
+        }
+
+        .img-container {
+            // width: 132px;
+            // height: 100px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            margin-inline-end: 10px;
+            &:not(:last-child) {
+            }
+
+            img {
+                border-radius: 6px;
+            }
+        }
+    }
+}

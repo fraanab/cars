@@ -1,0 +1,178 @@
+@keyframes blowing {
+    0% {
+        background-color: $clr1;
+    }
+    50% {
+        background-color: $clr6;
+    }
+    100% {
+        background-color: $clr1;
+    }
+}
+
+button {
+    cursor: pointer;
+    font-family: Roboto;
+}
+
+button.sort-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+    border-bottom: 1px solid $clr1;
+    font-size: 1em;
+    outline: none;
+    &:hover {
+        border-bottom: 2px solid $clr1;
+        margin-bottom: -1px;
+    }
+    &.active {
+        border-bottom: 2px solid $clr1;
+        margin-bottom: -1px;
+        font-weight: 700;
+    }
+
+    @include for-normal-layout {
+        width: 120px;
+    }
+}
+
+button.filter-btn {
+    background-color: white;
+    border: 1px solid $clr4;
+    border-radius: 5em;
+    outline: none;
+    width: 120px;
+    font-weight: 500;
+    font-size: 14px;
+    color: $clr3;
+    text-align: start;
+    padding: 0 13px;
+
+    &:hover {
+        border-color: $clr3;
+    }
+}
+// button.filter-btn {
+//     background-color: white;
+//     border: 1px solid $clr4;
+//     border-radius: 5em;
+//     outline: none;
+//     &:hover {
+//         // border-color: $clr3;
+//     }
+// }
+
+button.round-main.bid {
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0 2em 2em 0;
+    outline: none;
+    font-weight: 600;
+    width: 140px;
+    padding: 7px 10px;
+    background: $grad1;
+    color: $clr11;
+
+    &.blowing {
+        background: none;
+        animation-name: blowing;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+}
+
+button.round-main.go {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    min-width: 103px;
+    padding: 7px 10px;
+    background: $grad1;
+    color: $clr11;
+    min-height: 100%;
+    margin-inline-end: -1px;
+    margin-inline-start: 20px;
+    border-radius: 5rem 0 0 5rem;
+    .main-info-icon * {
+        color: white;
+    }
+    svg {
+        font-size: 1rem;
+        // margin-inline-end: 10px;
+    }
+
+    @include for-narrow-layout {
+        min-width: 118px;
+    }
+    @include for-normal-layout {
+        border-radius: 0 3em 3em 0;
+    }
+}
+
+button.round-main.watch {
+    height: 50px;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5em;
+    outline: none;
+    font-weight: 600;
+    background-color: transparent;
+    font-size: 2em;
+    // width: 80px;
+    margin-inline-end: 20px;
+    stroke: $clr6;
+    stroke-width: 20;
+
+    path {
+        color: $clr11;
+    }
+    &.active path {
+        color: $clr6;
+    }
+}
+
+.reg-btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 1.1em;
+
+    &.back {
+        background-color: $clr11;
+        border: 1px solid $clr3;
+    }
+
+    &.save {
+        background-color: $clr6;
+        color: $clr11;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    font-size: 1.5em;
+    color: $clr2;
+}
+
+.arrow-btn {
+    background-color: $clr11;
+    font-size: 1.5rem;
+    color: $clr2;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.9);
+}

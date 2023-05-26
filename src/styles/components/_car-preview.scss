@@ -1,0 +1,207 @@
+.car-preview {
+    // border: 1px solid $clr3;
+    * {
+        user-select: none;
+        font-size: 1rem;
+    }
+
+    position: relative;
+    align-items: flex-start;
+    // width: 100%;
+
+    p {
+        margin: 0;
+        font-size: 0.9em;
+    }
+
+    .el-carousel {
+        width: 100%;
+        margin-bottom: 60px;
+        border-radius: 6px;
+
+        // height: 50%
+    }
+
+    .img-container {
+        // height: 50%;
+        // width: 100%;
+        // margin-bottom: 40px;
+        overflow: hidden;
+
+        // .el-carousel__container{
+        //     height: 100%;
+        // }
+        img {
+            border-radius: 6px;
+            // height: 200px; ////////////////////////
+        }
+        img:hover {
+            transform: scale(1.05);
+            transition: 0.4s;
+            // width: 102%;
+            // transition: width .6s;
+        }
+    }
+    // .img-container {
+    //     height: 50%;
+    //     width: 100%;
+    //     margin-bottom: 40px;
+    //     overflow: hidden;
+    //     border-radius: 10px;
+
+    //     .block {
+    //         height: 100%;
+    //     }
+    //     // .el-carousel__container{
+    //     //     height: 100%;
+    //     // }
+    //     img {
+    //         height: 200px; ////////////////////////
+    //     }
+    //     img:hover {
+    //         transform: scale(1.05);
+    //         transition: .8s;
+    //         // width: 102%;
+    //         // transition: width .6s;
+    //     }
+
+    // }
+
+    .bid-info {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+        background-color: $clr11;
+        z-index: 30;
+        box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.9);
+        // box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.9);
+
+        opacity: 0.9;
+        width: 90%;
+        // align-self: center;
+        padding: 8px 15px;
+        border-radius: 6px;
+
+        p {
+            font-weight: 600;
+        }
+
+        .last-bid {
+            :first-child {
+                color: $clr6;
+                &.on-timer {
+                    color: $clr1;
+                }
+            }
+        }
+
+        .description {
+            font-size: 0.8em;
+            font-weight: 500;
+            color: $clr2;
+        }
+    }
+
+    // @keyframes timer {
+    //     from {width: 100%;}
+    //     to {width: 0;}
+    //   }
+
+    .bid-info-timer {
+        position: absolute;
+        z-index: -1;
+        border-radius: 6px 0 0 6px;
+        background-color: $clr6;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // animation-name: timer;
+        // animation-duration: 60s;
+        // animation-fill-mode: forwards;
+        // animation-timing-function: linear;
+        transition: width 2s;
+    }
+    @keyframes countdown-details {
+        0% {
+            // font-size: 0rem;
+            height: 0;
+            width: 0;
+        }
+        50% {
+            // font-size: 7rem;
+            height: 200px;
+            width: 200px;
+        }
+        100% {
+            // font-size: 0rem;
+            height: 0;
+            width: 0;
+        }
+    }
+
+    .inner-timer {
+        position: absolute;
+        top: -175px;
+        left: 40%;
+        // transform:translate(-50%);
+        font-size: 7rem;
+        font-weight: 800;
+        z-index: 200;
+        color: $clr6 !important;
+        overflow: hidden;
+        text-shadow: 3px 3px 5px $clr2;
+        // width: 200px;
+        // height: 200px;
+
+        animation-name: countdown-details;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    .preview-address {
+        color: $clr3;
+    }
+
+    .like-btn {
+        // position: absolute;
+        // top: 15px;
+        // left: 15px;
+        // z-index: 10;
+        // background-color: transparent;
+        border: none;
+        outline: none;
+        font-size: 1.4em;
+        color: $clr3;
+        // opacity: 0.7;
+        stroke: $clr11;
+        stroke-width: 40;
+
+        &.active {
+            color: $clr6;
+        }
+    }
+
+    > :last-child {
+        width: 100%;
+        .main-info-icon {
+            font-size: 1.2rem;
+            margin-inline-end: 5px;
+            // color: $clr6;
+            // margin-inline-end: 5px;
+        }
+    }
+
+    .preview-title-conteiner {
+        width: 100%;
+        white-space: nowrap;
+
+        & h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-inline-end: 10px;
+        }
+    }
+}
